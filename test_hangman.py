@@ -68,6 +68,39 @@ def test_lives_left_tracking():
     assert not won
 
 
+def test_lives_decremented_on_wrong_guess():
+    """Verify lives decremented exactly once per wrong guess."""
+    guessed, lives, won = update_game_state("apple", [], "z", 10)
+    assert lives == 9
+    guessed, lives, won = update_game_state("apple", guessed, "x", lives)
+    assert lives == 8
+    guessed, lives, won = update_game_state("apple", guessed, "q", lives)
+    assert lives == 7
+
+
+def test_lives_preserved_on_correct_guess():
+    """Verify lives NOT decremented on correct guesses."""
+    guessed, lives, won = update_game_state("apple", [], "a", 5)
+    assert lives == 5
+    guessed, lives, won = update_game_state("apple", guessed, "p", lives)
+    assert lives == 5
+    guessed, lives, won = update_game_state("apple", guessed, "l", lives)
+    assert lives == 5
+
+
+def test_lives_sequence():
+    """Verify correct sequence: wrong guesses decrease, correct guesses preserve."""
+    lives_initial = 6
+    guessed, lives, won = update_game_state("apple", [], "z", lives_initial)
+    assert lives == 5  # wrong
+    guessed, lives, won = update_game_state("apple", guessed, "a", lives)
+    assert lives == 5  # correct, no change
+    guessed, lives, won = update_game_state("apple", guessed, "x", lives)
+    assert lives == 4  # wrong
+    guessed, lives, won = update_game_state("apple", guessed, "p", lives)
+    assert lives == 4  # correct, no change
+
+
 def test_all_letters_pre_guessed():
     """All letters already guessed: immediate win."""
     guessed, lives, won = update_game_state("apple", ["a", "p", "l", "e"], "x", 6)

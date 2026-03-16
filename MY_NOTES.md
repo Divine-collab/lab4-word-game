@@ -57,3 +57,8 @@ Case Sensitivity: All inputs and secret words are normalized to lowercase.
 Empty Inputs: The validation logic catches empty strings or non-alphabetical characters to prevent the game state from updating incorrectly.
 
 Timer Latency: The timer check is performed at the beginning of every recursive call to ensure the player cannot bypass the limit by staying in the input() prompt too long.
+
+
+**New game instructions**
+For showing the player to choose either autoplay or not
+I was abit confused

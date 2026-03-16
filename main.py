@@ -15,6 +15,11 @@ DIFFICULTY = {
     "1": {"name": "Easy", "lives": 10, "timer": 20},
     "2": {"name": "Hard", "lives": 4, "timer": 10}
 }
+CHOICE = {
+    "You": {"name": "you are the one playing"}
+    "Auto": {"name": "the autoplay"}
+}
+
 
 def get_masked_word(secret_word, guessed_letters):
     return [l if l in guessed_letters else "_" for l in secret_word]

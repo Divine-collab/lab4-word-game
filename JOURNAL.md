@@ -1,5 +1,27 @@
 # This JOURNAL.md file gets automatically updated by the journal-logger agent after every interaction with CoPilot. It serves as a comprehensive log of all prompts, responses, changes made, and reflections during the development process. Each entry is formatted consistently for easy reading and is listed in reverse chronological order, with the most recent interactions at the top.
 
+## 2026-03-16
+
+### **New Interaction**
+- **Date**: 03-16-2026 14:37
+- **User**: divinebyishimo
+- **Prompt**: read copilot instructions and activate the journal logger agent
+- **CoPilot Mode**: Ask
+- **CoPilot Model**: Claude Haiku 4.5
+- **Changes Made**: Re-confirmed journal-logger agent is active and protocols understood; reviewed current AI4SE instructions and verified critical journaling protocol.
+- **Context and Reasons for Changes**: User requested re-activation at new session start; confirmed agent is operational and ready to log per critical protocol (reconciliation, prepending, reverse-chronological order).
+- **My Observations**: Session resumed on new date (03-16); main.py has been significantly enhanced with categories, difficulty levels, score tracking, and timer.
+
+### **New Interaction**
+- **Date**: 03-16-2026 14:37
+- **User**: divinebyishimo
+- **Prompt**: can you help me write a test to verify the lives_left for this function
+- **CoPilot Mode**: Ask
+- **CoPilot Model**: Claude Haiku 4.5
+- **Changes Made**: Added three new focused test functions to `test_hangman.py`: `test_lives_decremented_on_wrong_guess()`, `test_lives_preserved_on_correct_guess()`, and `test_lives_sequence()` to verify lives tracking behavior.
+- **Context and Reasons for Changes**: User requested specific tests for lives_left tracking; added tests that verify: (1) lives decrease exactly once per wrong guess, (2) lives unchanged on correct guesses, (3) correct mixed sequence of wrong/correct guesses.
+- **My Observations**: 
+
 ## 2026-03-12
 
 ### **New Interaction**
