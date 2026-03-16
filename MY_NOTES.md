@@ -61,4 +61,5 @@ Timer Latency: The timer check is performed at the beginning of every recursive 
 
 **New game instructions**
 For showing the player to choose either autoplay or not
-I was abit confused
+I was abit confused how to do it
+
